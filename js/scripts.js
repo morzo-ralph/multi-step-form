@@ -1,7 +1,9 @@
 'use strict';
 
 const app = (() => {
-    let isToggle = false, isChecked = false;
+    let a = [];
+    let str = '';
+    let isToggle = false;
     let nextButton, nextButton2, nextButton3, nextButton4, goBack1, goBack2, goBack3;
     let arcade, advanced, pro, toggle, month, year;
     let checkedValue;
@@ -46,6 +48,7 @@ const app = (() => {
             document.querySelector('.step-4').style.display = "block";
             document.querySelectorAll('.circle')[2].classList.remove("circle-active");
             document.querySelectorAll('.circle')[3].classList.add("circle-active");
+            finishingUp();
         });
         nextButton4.addEventListener('click', () => {
             document.querySelector('.step-4').style.display = "none";
@@ -74,18 +77,21 @@ const app = (() => {
             arcade.style.border = "1px solid var( --primary-purplish-blue)";
             advanced.style.border = "1px solid var(--neutral-light-gray)";
             pro.style.border = "1px solid var(--neutral-light-gray)";
+            a[0] = 0;
         });
 
         advanced.addEventListener('click', () => {
             arcade.style.border = "1px solid var(--neutral-light-gray)";
             advanced.style.border = "1px solid var( --primary-purplish-blue)";
             pro.style.border = "1px solid var(--neutral-light-gray)";
+            a[0] = 1;
         });
 
         pro.addEventListener('click', () => {
             arcade.style.border = "1px solid var(--neutral-light-gray) ";
             advanced.style.border = "1px solid var(--neutral-light-gray)";
             pro.style.border = "1px solid var(--primary-purplish-blue)";
+            a[0] = 2;
         });
 
         checkedValue[0].addEventListener('change', () => {
@@ -149,6 +155,60 @@ const app = (() => {
         document.querySelectorAll('.price')[2].innerHTML = "+$20/yr";
     }
 
+    const addOns = (num) => {
+        if(!isToggle) {
+            if(num == 0) {
+                str = '<div><p>Online service</p><p>+$1/mo</p></div>';
+            } else if(num == 1) {
+                str = '<div><p>Larger storage</p><p>+$2/mo</p></div>';
+            } else if(num == 2) {
+                str = '<div><p>Customizable profile</p><p>+$2/mo</p></div>';
+            }
+        } else {
+            if(num == 0) {
+                str = '<div><p>Online service</p><p class="text-marine">+$10/yr</p></div>';
+            } else if(num == 1) {
+                str = '<div><p>Larger storage</p><p class="text-marine">+$20/yr</p></div>';
+            } else if(num == 2) {
+                str = '<div><p>Customizable profile</p><p class="text-marine">+$20/yr</p></div>';
+            }
+        }
+        
+
+        return str;
+    }
+
+    const finishingUp = () => {
+        let checkboxes = document.getElementsByClassName('checkbox');
+        for(let i = 0; i < checkboxes.length; i++) {
+            if(checkboxes[i].checked) {
+               str += addOns(i);
+            }
+        }
+        let html = document.querySelectorAll('.step-editables')[0];
+        console.log(str);
+        let txt = ''
+        if(!isToggle) {            
+            if(a[0] == 0) {
+               txt = '<div><h3>Arcade (Monthly)</h3><p class="text-marine">$9/mo</p><br></div><div><a>Change</a></div><hr>'+str;
+            } else if (a[0] == 1) {
+                txt = '<div><h3>Advanced (Monthly)</h3><p class="text-marine">$12/mo</p></div><hr>'+str;
+            } else if (a[0] == 2) {
+                txt = '<div><h3>Pro (Monthly)</h3><p class="text-marine">$15/mo</p></div><hr>'+str;
+            }
+            html.innerHTML = txt;
+        } else {
+            if(a[0] == 0) {
+                txt = '<div><h3>Arcade (Yearly)</h3><p class="text-marine">$90/yr</p></div><hr>'+str;
+            } else if (a[0] == 1) {
+                txt = '<div><h3>Advanced (Yearly)</h3><p class="text-marine">$120/yr</p></div><hr>'+str;
+            } else if (a[0] == 2) {
+                txt = '<div><h3>Pro (Yearly)</h3><p class="text-marine">$150/yr</p></div><hr>'+str;
+            }
+            html.innerHTML = txt;
+        }
+
+    }
     init();
 
 })();

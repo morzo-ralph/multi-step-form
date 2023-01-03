@@ -11,7 +11,7 @@
     --neutral-white: hsl(0, 0%, 100%);
 }
 .text-marine {
-    color: var(--primary-marine-blue)
+    color: var(--primary-marine-blue) !important;
 }
 .text-bold {
     font-weight: 700;
@@ -283,4 +283,19 @@ input[type=text]{
   }
   #next-step-4 {
     background-color: var(--primary-purplish-blue);
+  }
+  .step-editables {
+    background-color: var(--neutral-magnolia);
+    padding: 20px;
+  }
+  .step-editables > div > h3 {
+    color: var(--primary-marine-blue);
+  }
+  .step-editables > div > p {
+    color: var(--neutral-cool-gray);
+  }
+  .step-editables > div{
+    display: flex;
+    flex-direction: row;
+    
   }
