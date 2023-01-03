@@ -80,7 +80,7 @@
           <br>
           <div class="step-cards">
 
-            <div class="step-card">
+            <div class="step-card" id="arcade">
               <div class="icons">
                 <img src="./assets/images/icon-arcade.svg" alt="">
               </div>
@@ -91,7 +91,7 @@
             </div>
 
 
-            <div class="step-card">
+            <div class="step-card" id="advanced">
               <div class="icons">
                 <img src="./assets/images/icon-advanced.svg" alt="">
               </div>
@@ -101,7 +101,7 @@
               </div>
             </div>
 
-            <div class="step-card">
+            <div class="step-card" id="pro">
               <div class="icons">
                 <img src="./assets/images/icon-pro.svg" alt="">
               </div>
@@ -113,18 +113,49 @@
           </div>
           <div class="step-container-toggle">
             <div class="step-toggle">
-              <span>Monthly <label class="switch">
-               <input type="checkbox">
-               <span class="slider round"></span>
-             </label>Yearly </span>  
+
+              <div id="month">Monthly</div>
+
+              <div id="slider">
+                <label class="switch">
+                  <input type="checkbox" id="toggle-checkbox">
+                  <span class="slider round"></span>
+                </label>
+
+              </div>
+              <div id="year">Yearly</div>
+            
              </div>
           </div>
           
-          
 
-          <div class="button-container">
+          <div class="button-container-2" style="margin-top: 13vh;">
             <button class="step-button" id="go-back-1">Go Back</button>
             <button class="step-button" id="next-step-2">Next Step</button>
+          </div>
+        </div>
+
+        <div class="step-3">
+          <div class="step-heading">
+            <h1>
+              Personal Info
+            </h1>
+            <p>Please provide your name, email address, and phone number.</p>
+          </div>
+          <br>
+          <div class="step-form">
+            <label for="name">Name</label><br>
+            <input type="text" name="name" id="name" placeholder="e.g. Stephen King"><br><br>
+
+            <label for="name">Email</label><br>
+            <input type="text" name="name" id="name" placeholder="e.g. stephenking@lorem.com"><br><br>
+
+            <label for="name">Phone Number</label><br>
+            <input type="text" name="name" id="name" placeholder="e.g. +1 234 567 890"><br><br>
+          </div>
+          <br><br><br>
+          <div class="button-container">
+            <button class="step-button" id="next-step">Next Step</button>
           </div>
         </div>
 
