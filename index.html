@@ -17,28 +17,37 @@
   </style>
 </head>
 <body>
+  <div class="mb-1234" style="display: none;">
+    <div class="mb-circle-container">
+      <div class="circle circle-active"><span>1</span></div>
+      <div class="circle"><span>2</span></div>
+      <div class="circle"><span>3</span></div>
+      <div class="circle"><span>4</span></div>
+    </div>
+    
+  </div>
 <main class="container">
   <div class="card">
     <div class="card-sidebar">
 
      <div class="sidebar-contents">
       <div class="circle circle-active"><span>1</span></div>
-      <div class="sidebar-text"><p><span>STEP 1</span><br><span class="text-bold">YOUR INFO</span></p></div>
+      <div class="sidebar-text mobile-gone"><p><span>STEP 1</span><br><span class="text-bold">YOUR INFO</span></p></div>
      </div>
 
      <div class="sidebar-contents">
       <div class="circle"><span>2</span></div>
-      <div class="sidebar-text"><p><span>STEP 2</span><br><span class="text-bold">SELECT PLAN</span></p></div>
+      <div class="sidebar-text mobile-gone"><p><span>STEP 2</span><br><span class="text-bold">SELECT PLAN</span></p></div>
      </div>
 
      <div class="sidebar-contents">
       <div class="circle"><span>3</span></div>
-      <div class="sidebar-text"><p><span>STEP 3</span><br><span class="text-bold">ADD-ONS</span></p></div>
+      <div class="sidebar-text mobile-gone"><p><span>STEP 3</span><br><span class="text-bold">ADD-ONS</span></p></div>
      </div>
 
      <div class="sidebar-contents">
       <div class="circle"><span>4</span></div>
-      <div class="sidebar-text"><p><span>STEP 4</span><br><span class="text-bold">SUMMARY</span></p></div>
+      <div class="sidebar-text mobile-gone"><p><span>STEP 4</span><br><span class="text-bold">SUMMARY</span></p></div>
      </div>
     </div>
 
@@ -103,7 +112,7 @@
 
             <div class="step-card" id="pro">
               <div class="icons">
-                <img src="./assets/images/icon-pro.svg" alt="icon-pro.svg" style="margin-right: 70px;">
+                <img src="./assets/images/icon-pro.svg" alt="icon-pro.svg"  id="icon-3">
               </div>
               <div class="step-text">
                 <p style="color: hsl(231, 11%, 63%);"> <b style="color: hsl(213, 96%, 18%);"> Pro</b>  <br>
@@ -147,14 +156,14 @@
             <div class="list-container">
               <input type="checkbox" class="checkbox">
               <span class="checkmark"></span>
-              <p><span class="text-bold text-marine"> Online Service </span><br> Access to multiplayer games</p>
+              <p id="p-1"><span class="text-bold text-marine"> Online Service </span><br> Access to multiplayer games</p>
               <span class="price">+$1/mo</span>
             </div>
 
             <div class="list-container">
               <input type="checkbox" class="checkbox">
               <span class="checkmark"></span>
-              <p><span class="text-bold text-marine"> Larger Storage </span><br> Extra 1TB of cloud save</p>
+              <p id="p-2"><span class="text-bold text-marine"> Larger Storage </span><br> Extra 1TB of cloud save</p>
               <span class="price">+$2/mo</span>
             </div>
 
@@ -191,7 +200,7 @@
             </div>
           </div>
           <br>
-          <div class="button-container-2" style="margin-top: 12vh;">
+          <div class="button-container-2">
             <button class="step-button" id="go-back-3">Go Back</button>
             <button class="step-button" id="next-step-4">Next Step</button>
           </div>
@@ -218,6 +227,7 @@
   
 </main>
   <footer class="attribution">
+    <span class="change-plan"></span>
     <p>  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="https://github.com/morzo-ralph">ral_3.14</a>.</p>
   

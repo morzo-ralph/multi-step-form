@@ -10,6 +10,9 @@
     --neutral-alabaster: hsl(231, 100%, 99%);
     --neutral-white: hsl(0, 0%, 100%);
 }
+.text-purple {
+  color: var(--primary-purplish-blue) !important;
+}
 .text-marine {
     color: var(--primary-marine-blue) !important;
 }
@@ -240,7 +243,7 @@ input[type=text]{
     padding: 0 20px;
     margin: 20px 0;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     border: 1px solid var(--neutral-cool-gray);
     border-radius: 10px;
     color: var(--primary-purplish-blue);
@@ -287,6 +290,7 @@ input[type=text]{
   .step-editables {
     background-color: var(--neutral-magnolia);
     padding: 20px;
+    border-radius: 15px;
   }
   .step-editables > div > h3 {
     color: var(--primary-marine-blue);
@@ -297,5 +301,77 @@ input[type=text]{
   .step-editables > div{
     display: flex;
     flex-direction: row;
-    
+    justify-content: space-between;
   }
+  .step-editables > div > a {
+    text-decoration: underline;
+    color: var(--neutral-cool-gray);
+  }
+  .step-editables > div > a:hover {
+    color: var(--primary-purplish-blue);
+    cursor: pointer;
+  }
+  .step-total {
+    padding: 20px;
+  }
+  .step-total > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: var(--neutral-cool-gray);
+  }
+  #icon-3 {
+    margin-right: 70px;
+  }
+  #p-1 {
+    padding-right: 13px;
+  }
+  #p-2 {
+    padding-right: 50px;
+  }
+  @media screen and (max-width: 768px) {
+    .step-cards {
+      gap: 10px;
+    }
+    .step-card {
+      padding: 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .card {
+      grid-template-columns: 1fr;
+    }
+    .mobile-gone {
+      display: none;
+    }
+    .card-sidebar {
+      display: none;
+    }
+    .sidebar-contents {
+      grid-template-columns: 1fr;
+    }
+    #icon-3 {
+      margin-right: 0;
+    }
+    .mb-1234 {
+      display: block !important;
+    }
+    .mb-circle-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 20px 50px 25px;
+    }
+    .circle {
+      padding: 10px 15px;
+    }
+    .container {
+      background: none;
+    }
+    body {
+      background-image: url('../assets/images/bg-sidebar-mobile.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+}
