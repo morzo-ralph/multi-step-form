@@ -37,22 +37,33 @@ const app = (() => {
             document.querySelector('.step-2').style.display = "block";
             document.querySelectorAll('.circle')[0].classList.remove("circle-active");
             document.querySelectorAll('.circle')[1].classList.add("circle-active");
+
+            document.querySelectorAll('.circle')[4].classList.remove("circle-active");
+            document.querySelectorAll('.circle')[5].classList.add("circle-active");
+
+            
         });
         nextButton2.addEventListener('click', () => {
             document.querySelector('.step-2').style.display = "none";
             document.querySelector('.step-3').style.display = "block";
             document.querySelectorAll('.circle')[1].classList.remove("circle-active");
             document.querySelectorAll('.circle')[2].classList.add("circle-active");
+
+            document.querySelectorAll('.circle')[5].classList.remove("circle-active");
+            document.querySelectorAll('.circle')[6].classList.add("circle-active");
         });
         nextButton3.addEventListener('click', () => {
             document.querySelector('.step-3').style.display = "none";
             document.querySelector('.step-4').style.display = "block";
             document.querySelectorAll('.circle')[2].classList.remove("circle-active");
             document.querySelectorAll('.circle')[3].classList.add("circle-active");
+
+            document.querySelectorAll('.circle')[6].classList.remove("circle-active");
+            document.querySelectorAll('.circle')[7].classList.add("circle-active");
             finishingUp();
 
             changePlan = document.querySelectorAll('.step-editables div a')[0];
-            
+
             changePlan.addEventListener("click", () => {
                 document.querySelector('.step-4').style.display = "none";
                 document.querySelector('.step-2').style.display = "block";
@@ -70,18 +81,27 @@ const app = (() => {
             document.querySelector('.step-2').style.display = "none";
             document.querySelectorAll('.circle')[1].classList.remove("circle-active");
             document.querySelectorAll('.circle')[0].classList.add("circle-active");
+
+            document.querySelectorAll('.circle')[5].classList.remove("circle-active");
+            document.querySelectorAll('.circle')[4].classList.add("circle-active");
         });
         goBack2.addEventListener('click', () => {
             document.querySelector('.step-2').style.display = "block";
             document.querySelector('.step-3').style.display = "none";
             document.querySelectorAll('.circle')[2].classList.remove("circle-active");
             document.querySelectorAll('.circle')[1].classList.add("circle-active");
+
+            document.querySelectorAll('.circle')[6].classList.remove("circle-active");
+            document.querySelectorAll('.circle')[5].classList.add("circle-active");
         });
         goBack3.addEventListener('click', () => {
             document.querySelector('.step-3').style.display = "block";
             document.querySelector('.step-4').style.display = "none";
             document.querySelectorAll('.circle')[3].classList.remove("circle-active");
             document.querySelectorAll('.circle')[2].classList.add("circle-active");
+
+            document.querySelectorAll('.circle')[7].classList.remove("circle-active");
+            document.querySelectorAll('.circle')[6].classList.add("circle-active");
             str = ''
         });
 
