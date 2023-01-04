@@ -69,6 +69,9 @@ const app = (() => {
                 document.querySelector('.step-2').style.display = "block";
                 document.querySelectorAll('.circle')[3].classList.remove("circle-active");
                 document.querySelectorAll('.circle')[1].classList.add("circle-active");
+
+                document.querySelectorAll('.circle')[7].classList.remove("circle-active");
+                document.querySelectorAll('.circle')[5].classList.add("circle-active");
                 str = '';
             })
         });
